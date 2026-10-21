@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0f131d;color:#dfe2f1;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 5rem);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#1d00a5", "border-highlight": "rgba(230, 40, 40, 0.35)", "on-error-container": "#ffdad6", "on-tertiary-fixed": "#001f26", "primary-fixed": "#ffdad6", "on-primary-fixed-variant": "#93000b", "on-tertiary-fixed-variant": "#004e5c", "border-subtle": "#2A364F", "inverse-on-surface": "#2c303b", "text-primary": "#F9FAFB", "on-surface": "#dfe2f1", "on-tertiary-container": "#002f38", "inverse-surface": "#dfe2f1", "secondary-container": "#3626ce", "on-secondary-fixed-variant": "#3323cc", "surface-tint": "#ffb4ab", "surface-card": "#161D2F", "text-muted": "#64748B", "outline": "#ad8884", "surface-container-low": "#171b26", "on-primary": "#690005", "background": "#0f131d", "surface-variant": "#313540", "primary-container": "#ff544a", "on-tertiary": "#003640", "outline-variant": "#5d3f3c", "surface-container-lowest": "#0a0e18", "secondary-fixed": "#e2dfff", "text-secondary": "#94A3B8", "surface-elevated": "#1E293B", "on-background": "#dfe2f1", "inverse-primary": "#c00013", "error": "#ffb4ab", "surface": "#0f131d", "tertiary-fixed": "#acedff", "surface-container-highest": "#313540", "error-container": "#93000a", "surface-container-high": "#262a35", "primary": "#ffb4ab", "primary-fixed-dim": "#ffb4ab", "on-error": "#690005", "on-secondary-container": "#b3b1ff", "on-secondary-fixed": "#0f0069", "secondary-fixed-dim": "#c3c0ff", "surface-container": "#1c1f2a", "surface-dim": "#0f131d", "crimson-glow": "#FF3B30", "on-primary-fixed": "#410002", "tertiary-fixed-dim": "#4cd7f6", "success-emerald": "#10B981", "surface-bright": "#353944", "tertiary": "#4cd7f6", "on-primary-container": "#5c0004", "on-surface-variant": "#e6bdb8", "tertiary-container": "#009eb9", "secondary": "#c3c0ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1rem", "space-md": "1rem", "margin": "1.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "metric-number": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "body-md": ["Inter"] }, "fontSize": { "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "metric-number": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-crimson-glow selection:text-text-primary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_4px_20px_rgba(0,0,0,0.35)]"><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-2.5"><div class="w-9 h-9 rounded-xl bg-surface-card flex items-center justify-center p-0.5"><img alt="Nexskill" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1X_6lDnOZ5prPHaIx8ZrvamgPPtQakP-WjWJkUeR4imIqj-_6YRnAfrqYqBGGjuYQIAEG_nU3Yj1dGCTKVlYvPzUIEJSFmeIxsjmbU5ncrgrHyUtxauf-Qf-6QkyvjLl8nTWE_4jvkrxZi_8vT-f0Mi8TcMn1xmmGEmkEM-4D3LIpnQdQ6RxHYS85Zd51zkz_oBIwMLji7qfVodbNIofIej4aEliEAmPpxEd3hKqejZN_euDESyfoJvHEDg"/></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight font-extrabold">NEXSKILL</span><div class="flex items-center gap-1 bg-surface-elevated px-1.5 py-0.5 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-crimson-glow animate-pulse"></span><span class="font-label-caps text-label-caps text-tertiary uppercase">LIVE 2026</span></div></div><span class="font-label-caps text-[10px] text-text-muted tracking-wider uppercase">AI &amp; Tech Institute</span></div></div><div class="flex items-center gap-2"><a aria-label="Call Admissions Desk" class="w-11 h-11 rounded-xl bg-surface-card flex items-center justify-center text-tertiary active:scale-95 transition-transform hover:bg-surface-elevated" href="tel:+923000000000"><span class="material-symbols-outlined text-xl">phone_in_talk</span></a><button aria-label="Open Menu" class="w-11 h-11 rounded-xl bg-surface-card flex items-center justify-center text-text-primary active:scale-95 transition-transform hover:bg-surface-elevated"><span class="material-symbols-outlined text-2xl">menu_open</span></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full px-4 space-y-6">
+<!-- Verification Pill & Mission Micro-Hero -->
+<section class="flex flex-col gap-3 pt-2">
+<div class="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full bg-surface-card border-subtle">
+<span class="w-2 h-2 rounded-full bg-crimson-glow animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-tertiary tracking-wide uppercase">Official NexTalent Placement Cell</span>
+<span class="material-symbols-outlined text-success-emerald text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex flex-col gap-2">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-text-primary tracking-tight font-extrabold">
+        Bridging the Gap Between <span class="text-transparent bg-clip-text bg-gradient-to-r from-crimson-glow via-tertiary to-text-primary">Talent &amp; Industry Careers</span>
+</h1>
+<p class="font-body-md text-body-md text-text-secondary">
+        Direct corporate pipelines, AI-driven portfolio vetting, and institutional job fests delivering verified market entry for Pakistani engineers.
+      </p>
+</div>
+<!-- Accreditations Strip -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 pt-1 no-scrollbar">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-card">
+<span class="material-symbols-outlined text-tertiary text-xs">verified_user</span>
+<span class="font-label-caps text-label-caps text-text-primary">NAVTTC Approved</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-card">
+<span class="material-symbols-outlined text-tertiary text-xs">workspace_premium</span>
+<span class="font-label-caps text-label-caps text-text-primary">PSDF Certified</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-card">
+<span class="material-symbols-outlined text-tertiary text-xs">school</span>
+<span class="font-label-caps text-label-caps text-text-primary">TEVTA Recognized</span>
+</div>
+</div>
+</section>
+<!-- High-Impact Placement Metric Blocks -->
+<section class="grid grid-cols-3 gap-2.5">
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-card shadow-md text-center">
+<span class="font-metric-number text-metric-number text-crimson-glow leading-none font-extrabold">85%</span>
+<span class="font-label-caps text-[10px] text-text-muted uppercase tracking-wider mt-1.5">Placement Rate</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-card shadow-md text-center">
+<span class="font-metric-number text-metric-number text-tertiary leading-none font-extrabold">18K+</span>
+<span class="font-label-caps text-[10px] text-text-muted uppercase tracking-wider mt-1.5">Alumni Placed</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-card shadow-md text-center">
+<span class="font-metric-number text-metric-number text-text-primary leading-none font-extrabold">200+</span>
+<span class="font-label-caps text-[10px] text-text-muted uppercase tracking-wider mt-1.5">Hiring Nodes</span>
+</div>
+</section>
+<!-- Interactive Dual Toggle CTA: Recruiters vs Candidates -->
+<section class="p-4 rounded-xl bg-surface-card shadow-xl relative overflow-hidden">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-crimson-glow text-xl">rocket_launch</span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Nexskill Job Fest 2026</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-elevated font-label-caps text-[10px] text-tertiary tracking-wide uppercase">Active Round</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary pb-4">
+      Join 7,000+ documented success stories. Rapid screening, on-spot interviews, and corporate placements happening daily across Lahore, Karachi &amp; Mian Channu centers.
+    </p>
+<!-- Action Buttons Duo -->
+<div class="grid grid-cols-2 gap-2.5">
+<button class="flex items-center justify-center gap-1.5 h-12 px-3 rounded-xl bg-crimson-glow text-text-primary font-label-lg text-label-lg shadow-lg active:scale-95 transition-transform" id="btn-jobfest" onclick="triggerToast('Job Fest Application Form Loaded')">
+<span class="material-symbols-outlined text-base">send</span>
+<span>Apply for Fest</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 h-12 px-3 rounded-xl bg-surface-elevated text-text-primary font-label-lg text-label-lg active:scale-95 transition-transform hover:bg-surface-variant" id="btn-hire" onclick="triggerToast('Recruiter Desk Connected')">
+<span class="material-symbols-outlined text-base text-tertiary">corporate_fare</span>
+<span>Hire Grads</span>
+</button>
+</div>
+</section>
+<!-- 4-Step Placement Roadmap Flow -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-xl">conversion_path</span>
+<h2 class="font-headline-sm text-headline-sm text-text-primary font-bold">Placement Pipeline</h2>
+</div>
+<span class="font-label-caps text-[10px] text-text-muted uppercase">4 Phase Readiness</span>
+</div>
+<div class="flex flex-col gap-3 relative">
+<!-- Step 1 -->
+<div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-card shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-elevated flex items-center justify-center shrink-0 text-tertiary font-headline-sm font-bold">
+          01
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-text-primary font-semibold">Technical Mastery &amp; AI Capstone</span>
+<span class="material-symbols-outlined text-tertiary text-sm">memory</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">
+            Production-grade sprint building real apps under direct senior engineer supervision. End-to-end fullstack AI architecture.
+          </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-card shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-elevated flex items-center justify-center shrink-0 text-crimson-glow font-headline-sm font-bold">
+          02
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-text-primary font-semibold">Soft Skills &amp; Leadership Lab</span>
+<span class="material-symbols-outlined text-crimson-glow text-sm">record_voice_over</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">
+            Mock executive panels, team communication, and negotiation protocols. Yields 95% confidence uplift and 90% interview clearance.
+          </p>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-elevated font-label-caps text-[10px] text-success-emerald">+95% Confidence</span>
+<span class="px-2 py-0.5 rounded bg-surface-elevated font-label-caps text-[10px] text-tertiary">90% First-Round Pass</span>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-card shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-elevated flex items-center justify-center shrink-0 text-text-primary font-headline-sm font-bold">
+          03
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-text-primary font-semibold">Resume &amp; GitHub Deep Scrub</span>
+<span class="material-symbols-outlined text-text-muted text-sm">terminal</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">
+            Industry recruiters audit code repositories, live demo URLs, ATS-optimized CVs, and technical LinkedIn presences.
+          </p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-elevated shadow-md">
+<div class="w-9 h-9 rounded-lg bg-crimson-glow/20 flex items-center justify-center shrink-0 text-crimson-glow font-headline-sm font-bold">
+          04
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-text-primary font-semibold">Job Fest Direct Interviews</span>
+<span class="material-symbols-outlined text-success-emerald text-sm">handshake</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">
+            Guaranteed slot allocation with partnering software houses, fintech enterprises, and US/GCC remote dev desks.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Hiring Stats Radar / Performance Visual -->
+<section class="p-4 rounded-xl bg-surface-card shadow-lg flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Readiness Metrics</span>
+<span class="font-body-sm text-body-sm text-text-muted">Batch 2025-2026 Validation</span>
+</div>
+<span class="material-symbols-outlined text-tertiary">query_stats</span>
+</div>
+<!-- Mini Visual Bar Breakdown -->
+<div class="space-y-2.5 pt-1">
+<div>
+<div class="flex justify-between font-label-md text-label-md pb-1 text-text-secondary">
+<span>Technical Architecture Competency</span>
+<span class="text-text-primary font-bold">96%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-elevated overflow-hidden">
+<div class="h-full bg-crimson-glow rounded-full" style="width: 96%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-md text-label-md pb-1 text-text-secondary">
+<span>AI Assisted Pair-Programming</span>
+<span class="text-text-primary font-bold">92%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-elevated overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 92%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-md text-label-md pb-1 text-text-secondary">
+<span>English &amp; Corporate Delivery</span>
+<span class="text-text-primary font-bold">89%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-elevated overflow-hidden">
+<div class="h-full bg-success-emerald rounded-full" style="width: 89%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Industry & Academia Partners Grid -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-text-primary font-bold">Hiring &amp; Academic Alliances</h2>
+<p class="font-body-sm text-body-sm text-text-muted">Direct recruiting alliances &amp; institutional MOUs</p>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-card font-label-caps text-label-caps text-tertiary">200+ Active</span>
+</div>
+<!-- Partner Grid -->
+<div class="grid grid-cols-3 gap-2">
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-card text-center hover:bg-surface-elevated transition-colors">
+<span class="font-label-lg text-label-lg text-text-primary font-bold">HBL</span>
+<span class="font-label-caps text-[9px] text-text-muted mt-0.5">FinTech &amp; Core</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-card text-center hover:bg-surface-elevated transition-colors">
+<span class="font-label-lg text-label-lg text-text-primary font-bold">LUMS</span>
+<span class="font-label-caps text-[9px] text-text-muted mt-0.5">Academic Link</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-card text-center hover:bg-surface-elevated transition-colors">
+<span class="font-label-lg text-label-lg text-text-primary font-bold">Purelogics</span>
+<span class="font-label-caps text-[9px] text-text-muted mt-0.5">Enterprise Dev</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-card text-center hover:bg-surface-elevated transition-colors">
+<span class="font-label-lg text-label-lg text-text-primary font-bold">PITB</span>
+<span class="font-label-caps text-[9px] text-text-muted mt-0.5">Govt Tech Board</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-card text-center hover:bg-surface-elevated transition-colors">
+<span class="font-label-lg text-label-lg text-text-primary font-bold">Prog Force</span>
+<span class="font-label-caps text-[9px] text-text-muted mt-0.5">AI Solutions</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-card text-center hover:bg-surface-elevated transition-colors">
+<span class="font-label-lg text-label-lg text-text-primary font-bold">Game Storm</span>
+<span class="font-label-caps text-[9px] text-text-muted mt-0.5">3D &amp; Engine</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-card text-center hover:bg-surface-elevated transition-colors">
+<span class="font-label-lg text-label-lg text-text-primary font-bold">Ozi Pub</span>
+<span class="font-label-caps text-[9px] text-text-muted mt-0.5">Mobile Studios</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-card text-center hover:bg-surface-elevated transition-colors">
+<span class="font-label-lg text-label-lg text-text-primary font-bold">Alkhidmat</span>
+<span class="font-label-caps text-[9px] text-text-muted mt-0.5">Impact Tech</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-card text-center hover:bg-surface-elevated transition-colors">
+<span class="font-label-lg text-label-lg text-text-primary font-bold">SSUET</span>
+<span class="font-label-caps text-[9px] text-text-muted mt-0.5">Engineering Uni</span>
+</div>
+</div>
+</section>
+<!-- Alumni Spotlights / Recent Verified Placements (Horizontal Scroll) -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-text-primary font-bold">Alumni Hires</h2>
+<p class="font-body-sm text-body-sm text-text-muted">Real careers transformed at Arfa Tower &amp; Campuses</p>
+</div>
+<span class="material-symbols-outlined text-crimson-glow">stars</span>
+</div>
+<!-- Scrollable Snapshot Cards -->
+<div class="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 snap-x snap-mandatory no-scrollbar">
+<!-- Candidate 1 -->
+<div class="snap-start shrink-0 w-[280px] p-4 rounded-xl bg-surface-card flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Professional headshot of a confident Pakistani male software developer wearing a dark navy blazer with gentle studio lighting and soft blurred modern tech background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqqhHHTHZC88TE7Phu9LawdThp5Sa4oP_qQ7wveVLHm9l5ijo3qqjex6w0HUx7eepTbyh0iWVVFP23jgxZRoTfwF5hzygNeA8s1ANaKY3hydd1ripq3M2X7mds6cXHFPDv6o8tCY_CvrCm3OOJl12pNg05nE931cErmrk9u9o_NRp8lPBVFVqxeWtiwjKq76vxz0R9v3scWTQO30trjwC9m7M9IouG7e8xsMosqDJYOLZejcgUTpn4fw"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-text-primary font-bold truncate">Bilal Ahmad</span>
+<span class="font-label-md text-label-md text-tertiary">Full Stack AI Engineer</span>
+<span class="font-body-sm text-[11px] text-text-muted">Placed at Purelogics</span>
+</div>
+</div>
+<div class="mt-3 p-2.5 rounded-lg bg-surface-elevated">
+<p class="font-body-sm text-body-sm text-text-secondary italic">
+              "Nexskill's mock boards gave me the exact confidence needed to crack a high-tier salary package right out of Arfa Tower."
+            </p>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-success-emerald uppercase font-bold">+180% Compensation Jump</span>
+<span class="material-symbols-outlined text-success-emerald text-sm">verified</span>
+</div>
+</div>
+<!-- Candidate 2 -->
+<div class="snap-start shrink-0 w-[280px] p-4 rounded-xl bg-surface-card flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Headshot of a modern Pakistani female technology professional smiling warmly in business casual attire in front of a clean office interior with natural warm light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU6eaLPrKoqZmVIvCpnFAITt-qlx8I5tHXlXLtL2iZgO9CtPPTZbcHB7ZBsClmyAaIRg0jw11iYTgO0HyL58zvgRwcOE_4QmxUv68IhiA-VbLJ49BqQudbNml-uAxf42uvQUn5kHgV4V602DFH-7XJjtV6cB_92vSRp9dsYwGVg_dCnuWdyYUAJp84_zCca55jfJxb8yXCgWtJuTFQSzkXWeHnauocrJ2GVMAPGtKWH7B5SIF3Bz1tqA"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-text-primary font-bold truncate">Ayesha Noor</span>
+<span class="font-label-md text-label-md text-tertiary">AI Growth Strategist</span>
+<span class="font-body-sm text-[11px] text-text-muted">Placed at Game Storm</span>
+</div>
+</div>
+<div class="mt-3 p-2.5 rounded-lg bg-surface-elevated">
+<p class="font-body-sm text-body-sm text-text-secondary italic">
+              "The resume audit and direct interview voucher connected me with 3 employers simultaneously during the Job Fest week."
+            </p>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-success-emerald uppercase font-bold">On-Spot Offer Letter</span>
+<span class="material-symbols-outlined text-success-emerald text-sm">verified</span>
+</div>
+</div>
+<!-- Candidate 3 -->
+<div class="snap-start shrink-0 w-[280px] p-4 rounded-xl bg-surface-card flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Close up portrait of a young Pakistani male cybersecurity analyst in modern glasses and sleek dark knitwear looking forward confidently with subtle neon rim light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9QRwe_IU7RCLDR3E5jVfjzj9aKWlrdnI_22SBlpCqHE4K2Mh8hFpnQFtV_s6jSsjsHpb_3VYkNmgkyjJGVPI8b6YUeP0ixoGSOPXGf4RiVrbggJILqdU0pYpP-b0gBCy9dmvPkSZcG1ya2JZN_L2kTgt1hYFnDXTloLdA-8HXZgvhBdArbMjAQb_WruT8DPWUL9K0sD4HnwxINpLsYykioqCwfFDgq_V53x7hYnVlvc4Mu7m0M4UBjw"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-text-primary font-bold truncate">Zain Ul Abideen</span>
+<span class="font-label-md text-label-md text-tertiary">Cybersecurity Associate</span>
+<span class="font-body-sm text-[11px] text-text-muted">Placed at HBL Tech Center</span>
+</div>
+</div>
+<div class="mt-3 p-2.5 rounded-lg bg-surface-elevated">
+<p class="font-body-sm text-body-sm text-text-secondary italic">
+              "The hands-on defensive lab simulations aligned with real bank infrastructure audits. Recruited in first round."
+            </p>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-success-emerald uppercase font-bold">Banking Core Deployment</span>
+<span class="material-symbols-outlined text-success-emerald text-sm">verified</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Physical Campus Direct Assistance Card -->
+<section class="p-4 rounded-xl bg-surface-card shadow-lg flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-crimson-glow text-xl">apartment</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold">In-Person Placement Desks</h3>
+</div>
+<span class="flex items-center gap-1 font-label-caps text-[10px] text-success-emerald">
+<span class="w-1.5 h-1.5 rounded-full bg-success-emerald animate-ping"></span> Open 10AM-9PM
+      </span>
+</div>
+<!-- Mini Branch Contacts List -->
+<div class="flex flex-col gap-2 pt-1">
+<a class="flex items-center justify-between p-2.5 rounded-lg bg-surface-elevated hover:bg-surface-variant transition-colors" href="https://maps.app.goo.gl/eScw8ScfL5m1ojsY8" target="_blank">
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-text-primary font-semibold">Lahore: Arfa Tower &amp; Garden Town</span>
+<span class="font-body-sm text-xs text-text-muted truncate">2nd Floor Arfa Software Tech Park / New Garden Town</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-lg">near_me</span>
+</a>
+<a class="flex items-center justify-between p-2.5 rounded-lg bg-surface-elevated hover:bg-surface-variant transition-colors" href="https://maps.app.goo.gl/KW6Pj3u2dBxDFXSm8" target="_blank">
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-text-primary font-semibold">Karachi: PARSA Tower</span>
+<span class="font-body-sm text-xs text-text-muted truncate">Office #608, Shahra-e-Faisal, Karachi</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-lg">near_me</span>
+</a>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-elevated">
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-text-primary font-semibold">24/7 Placement Helpline</span>
+<span class="font-body-sm text-xs text-text-muted">+92 309 666 3330 • trainings@nexskill.com</span>
+</div>
+<a class="w-9 h-9 rounded-lg bg-crimson-glow/20 flex items-center justify-center text-crimson-glow" href="tel:+923096663330">
+<span class="material-symbols-outlined text-lg">call</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Interactive Quick Application Sheet Drawer Form -->
+<section class="p-4 rounded-xl bg-surface-card shadow-xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold">Fast-Track Career Registration</h3>
+<p class="font-body-sm text-body-sm text-text-muted">Submit credentials for immediate partner matching</p>
+</div>
+<span class="material-symbols-outlined text-tertiary">badge</span>
+</div>
+<form class="space-y-3 pt-1" id="career-form" onsubmit="handleRegistration(event)">
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-text-secondary uppercase">Full Name</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-elevated text-text-primary font-body-md text-body-md placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-crimson-glow transition-all" placeholder="e.g. Daniyal Tariq" required="" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-text-secondary uppercase">WhatsApp / Contact Number</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-elevated text-text-primary font-body-md text-body-md placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-crimson-glow transition-all" placeholder="03096663330 or +923096663330" required="" type="tel"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-text-secondary uppercase">Field of Specialization</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface-elevated text-text-primary font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-crimson-glow transition-all">
+<option>Full Stack Artificial Intelligence</option>
+<option>Software Engineering with AI</option>
+<option>Advance Cyber Security</option>
+<option>Digital Growth Marketing with AI</option>
+<option>Mobile App Development with AI</option>
+<option>UI/UX &amp; Product Design</option>
+</select>
+</div>
+<button class="w-full h-12 mt-2 rounded-xl bg-crimson-glow text-text-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-lg" type="submit">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+<span>Submit for Placement Matching</span>
+</button>
+</form>
+</section>
+<!-- Interactive Toast Notification Container -->
+<div class="fixed bottom-20 left-4 right-4 z-50 pointer-events-none opacity-0 transition-opacity duration-300 flex items-center justify-between p-3.5 rounded-xl bg-surface-elevated shadow-2xl" id="toast-notify">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-success-emerald text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-md text-label-md text-text-primary" id="toast-text">Action confirmed</span>
+</div>
+<span class="font-label-caps text-[10px] text-tertiary uppercase">Nexskill Active</span>
+</div>
+</div>
+<script>
+  function triggerToast(message) {
+    const toast = document.getElementById('toast-notify');
+    const toastText = document.getElementById('toast-text');
+    if (toast && toastText) {
+      toastText.textContent = message;
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 2600);
+    }
+  }
+
+  function handleRegistration(e) {
+    e.preventDefault();
+    triggerToast('Profile Submitted to 200+ Hiring Partners!');
+    e.target.reset();
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 bg-surface-card/90 backdrop-blur-xl shadow-[0_-8px_30px_rgba(0,0,0,0.5)]" data-active-classes="text-crimson-glow font-label-lg"><div class="flex justify-around items-center h-16 max-w-md mx-auto px-2"><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] gap-1 text-text-muted transition-colors active:scale-95" data-path="home" href="#"><span class="material-symbols-outlined text-2xl">home</span><span class="font-label-md text-label-md">Home</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] gap-1 text-text-muted transition-colors active:scale-95" data-path="courses" href="#"><span class="material-symbols-outlined text-2xl">terminal</span><span class="font-label-md text-label-md">Courses</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] gap-1 transition-colors active:scale-95 text-crimson-glow font-label-lg" data-path="placements" href="#"><span class="material-symbols-outlined text-2xl">workspace_premium</span><span class="font-label-md text-label-md">Placements</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] gap-1 text-text-muted transition-colors active:scale-95" data-path="campuses" href="#"><span class="material-symbols-outlined text-2xl">apartment</span><span class="font-label-md text-label-md">Campuses</span></a></div></nav></body></html>
